@@ -27,8 +27,8 @@
 	
     <!-- favicons
     ================================================== -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="logo2.ico" type="image/x-icon">
+    <link rel="icon" href="logo2.ico" type="image/x-icon">
 
 </head>
 
@@ -61,17 +61,14 @@
                     </h1>
 
                     <p>
-                    QAI-Quantum Authority of Innovation is a research project and Ed-Tceh based 
-					start-up which will help enthusiastic students to learn about Quantum Technologies 
-					and explore trending domains like Quantum Machine Learning , Quantum Cryptography
-					and Artificial Intelligence.
+                    Register yourself for further Updates
                     </p>
 
                     <div class="home-content__subscribe">
-                        <form id="mc-form" class="group" novalidate="true">
+                        <form autocomplete="off" id="mc-form" class="group" novalidate="true" name="google-sheet">
                             <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
-                            <input type="submit" name="subscribe" value="Notify Me">
-                            <label for="mc-email" class="subscribe-message"></label>
+                            <input onclick="document.getElementById('myInput').value = ''" type="submit" name="subscribe" value="Notify Me">
+                            
                         </form>
                     </div>
                 </div>  <!-- end home-content__text -->
@@ -114,7 +111,7 @@
                 <a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
                 </li>
                 <li>
-                <a href="#0"><i class="fab fa-linkedin" aria-hidden="true"></i><span>Linkedin</span></a>
+                <a href="https://www.linkedin.com/company/qai-india"><i class="fab fa-linkedin" aria-hidden="true"></i><span>Linkedin</span></a>
                 </li>
                 <li>
                 <a href="#0"><i class="fab fa-youtube" aria-hidden="true"></i><span>Youtube</span></a>
@@ -122,8 +119,8 @@
             </ul> <!-- end home-social -->
 
             <div class="row home-copyright">
-                <span>Copyright Count 2018</span> 
-                <span>Design by <a href="https://www.styleshout.com/">styleshout</a></span>
+                <span>Copyright QAI 2022</span> 
+                <span>Design by <a href="https://qaiofficial.github.io/">QAI</a></span>
             </div> <!-- end home-copyright -->
 
 
@@ -145,20 +142,15 @@
         <div class="row info-wrapper">
 
             <div class="col-seven tab-full info-main">
-                <h1>We are Count. We make awesome stuff.</h1>
+                <h1>Let's know more about QAI</h1>
                 <p>
-                Quisque velit nisi, pretium ut lacinia in, elementum id enim. Mauris blandit aliquet elit, 
-                eget tincidunt nibh pulvinar a. Quisque velit nisi, pretium ut lacinia in, elementum id enim. 
-                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; 
-                Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
+                QAI-Quantum Authority of Innovation is a research project and Ed-Tceh based 
+				start-up which will help enthusiastic students to learn about Quantum Technologies 
+				and explore trending domains like Quantum Machine Learning , Quantum Cryptography
+				and Artificial Intelligence.
                 </p>
 
-                <p>
-                Officiis nostrum adipisci minima. Enim tenetur animi ipsum a itaque temporibus necessitatibus. 
-                Dolores ad perspiciatis. Voluptatem et molestiae adipisci laboriosam assumenda. Deleniti vero 
-                labore eos repudiandae. Vel commodi tenetur ex quia. Quisque velit nisi, pretium ut lacinia in, 
-                elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere.
-                </p>
+                
             </div>
 
             <div class="col-four tab-full pull-right info-contact">
@@ -171,15 +163,15 @@
                     </p>
                 </div>
 
-                <div class="info-block">
-                    <h3>Visit Our Office</h3>
+                <!-- <div class="info-block"> -->
+                    <!-- <h3>Visit Our Office</h3> -->
                     
-                    <p class="info-address">
-                        1600 Amphitheatre Parkway<br>
-                        Mountain View, CA<br>
-                        94043 US
-                    </p>
-                </div>
+                    <!-- <p class="info-address"> -->
+                        <!-- 1600 Amphitheatre Parkway<br> -->
+                        <!-- Mountain View, CA<br> -->
+                        <!-- 94043 US -->
+                    <!-- </p> -->
+                <!-- </div> -->
 
                 <div class="info-block">
                     <h3>Find Us On</h3>
@@ -198,7 +190,7 @@
                             <span>Instagram</span></a>
                         </li>
                         <li>
-                            <a href="#0"><i class="fab fa-linkedin" aria-hidden="true"></i>
+                            <a href="https://www.linkedin.com/company/qai-india"><i class="fab fa-linkedin" aria-hidden="true"></i>
                             <span>Linkedin</span></a>
                         </li>
                         <li>
@@ -235,6 +227,19 @@
     <script src="js/plugins.js"></script>
     <script src="js/polygons.js"></script>
     <script src="js/main.js"></script>
+	
+	
+	<script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbysS04mHy9ztnsjfaxANaL6hxy7whoeGVPIJ6I_diykfwE4ldlIj50p7NTQ_x2S5M1p7Q/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+    </script>
 
 </body>
 
